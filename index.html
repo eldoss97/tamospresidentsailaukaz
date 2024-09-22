@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кампания за президента школы</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение CSS -->
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="header-content">
+            <img src="tamos.png" alt="Эмблема школы" class="school-logo">
+            <h1>Оспан Ғабит</h1>
+            <p>Маған дауыс беріп мектебімізді жақсартуға көмектес!</p>
+            <button id="voteButton" class="cta-button">Қазір дауыс бер!</button>
+            <p id="voteCount">Дауыс саны: 0</p>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main>
+        <div class="candidate-container">
+            <!-- Фото кандидата -->
+            <section class="photo">
+                <img src="gaba.jfif" alt="Твое Имя" />
+            </section>
+
+            <!-- Платформа кандидата -->
+            <section class="platform">
+                <h2>Мен туралы</h2>
+                <p>Бәріңізге сәлем!Менің атым Оспан Ғабит 10 Ә сынып оқушысымын.Менің басты мақсатым - мектеп өмірін жақсарту және жаңарту.Сонымен қоса мен өткен жылғы парламент мүшесі болып спорт министрі атанған болатынмын</p>
+                
+                <h2>Менің жоспарым</h2>
+                <div class="platform-item">
+                    <h3>Мектеп ішіндегі мәдени іс шаралар</h3>
+                    <p>Дискотека,кино кеші,қысқы бал</p>
+                </div>
+                <div class="platform-item">
+                    <h3>Спорттық іс шаралар</h3>
+                    <p>5-11 сыныптар арасында футболдан турнирлер,мектеп командасын құру.</p>
+                    <p>5-11 сыныптар арасында пинг понг және волйеболдан жарыстар</p>
+                </div>
+                <div class="platform-item">
+                    <h3>Білім бағыты</h3>
+                    <p>Білім күні,кітап сайысы</p>
+                </div>
+                <div class="platform-item">
+                    <h3>Оқушылар іс шаралары</h3>
+                    <p>Волонтерлік қызметін еңгізу</p>
+                </div>
+                <div class="platform-item">
+                    <h3>eSports турнирлері</h3>
+                    <p>Brawl Stars, CS2 сияқты ойындарға арналған киберспорт турнирлерін ұйымдастыру</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy;2024 мектеп президенттілігін сайлау кампаниясы. Сайтты жасаған Болатбеков Елдос</p>
+    </footer>
+
+    <script>
+        let votes = 0; // Переменная для хранения количества голосов
+
+        // Функция для обработки голосования
+        document.getElementById('voteButton').addEventListener('click', function() {
+            votes++; // Увеличиваем количество голосов
+            document.getElementById('voteCount').textContent = 'Дауыс саны: ' + votes; // Обновляем текст
+        });
+    </script>
+
+</body>
+</html>
