@@ -1,0 +1,155 @@
+/* Общие стили для сайта */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Стили для шапки сайта */
+header {
+    background-color: #4CAF50;
+    padding: 50px 20px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.school-logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.header-content h1 {
+    font-size: 3em;
+    margin: 0 0 10px;
+}
+
+.header-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #FF5722;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #E64A19;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Контейнер для фото кандидата и платформы */
+.candidate-container {
+    display: flex;
+    align-items: flex-start;
+    margin: 40px 20px;
+}
+
+/* Фото кандидата */
+section.photo {
+    margin-right: 20px; /* Отступ между фото и текстом */
+}
+
+section.photo img {
+    width: auto;
+    height: 300px; /* Установка высоты фото */
+    border-radius: 50%;
+    border: 5px solid #4CAF50;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Секция программы кандидата */
+section.platform {
+    flex-grow: 1;
+    padding: 30px;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для виджетов */
+.platform-item {
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.platform-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background-color: #bbdefb;
+}
+
+.platform-item h3 {
+    margin-top: 0;
+}
+
+/* Подвал сайта */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+    /* Уменьшение размера текста для мобильных */
+    header {
+        padding: 30px 10px;
+    }
+
+    .header-content h1 {
+        font-size: 2.2em; /* Уменьшение заголовка */
+    }
+
+    .header-content p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1.2em;
+    }
+
+    /* Фото кандидата и программа теперь идут друг за другом */
+    .candidate-container {
+        flex-direction: column; /* Вертикальное расположение */
+        align-items: center;
+    }
+
+    section.photo {
+        margin-bottom: 20px; /* Добавление отступа снизу для фото */
+    }
+
+    section.photo img {
+        height: 200px; /* Уменьшение высоты фото для мобильных */
+    }
+
+    section.platform {
+        padding: 20px;
+        max-width: 100%; /* Заполняем доступное пространство */
+    }
+
+    .platform-item {
+        padding: 15px;
+    }
+}
